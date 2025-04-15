@@ -9,12 +9,20 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+<<<<<<< HEAD
+=======
+    /** @use HasFactory<\Database\Factories\UserFactory> */
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
     use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
      *
+<<<<<<< HEAD
      * @var array<int, string>
+=======
+     * @var list<string>
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
      */
     protected $fillable = [
         'name',
@@ -25,7 +33,11 @@ class User extends Authenticatable
     /**
      * The attributes that should be hidden for serialization.
      *
+<<<<<<< HEAD
      * @var array<int, string>
+=======
+     * @var list<string>
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
      */
     protected $hidden = [
         'password',

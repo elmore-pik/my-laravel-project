@@ -26,7 +26,11 @@ return [
     | well as their drivers. You may even define multiple stores for the
     | same cache driver to group types of items stored in your caches.
     |
+<<<<<<< HEAD
     | Supported drivers: "apc", "array", "database", "file", "memcached",
+=======
+    | Supported drivers: "array", "database", "file", "memcached",
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
     |                    "redis", "dynamodb", "octane", "null"
     |
     */
@@ -40,9 +44,16 @@ return [
 
         'database' => [
             'driver' => 'database',
+<<<<<<< HEAD
             'table' => env('DB_CACHE_TABLE', 'cache'),
             'connection' => env('DB_CACHE_CONNECTION'),
             'lock_connection' => env('DB_CACHE_LOCK_CONNECTION'),
+=======
+            'connection' => env('DB_CACHE_CONNECTION'),
+            'table' => env('DB_CACHE_TABLE', 'cache'),
+            'lock_connection' => env('DB_CACHE_LOCK_CONNECTION'),
+            'lock_table' => env('DB_CACHE_LOCK_TABLE'),
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
         ],
 
         'file' => [

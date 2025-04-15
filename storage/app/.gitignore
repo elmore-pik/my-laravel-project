@@ -1,3 +1,7 @@
 *
+<<<<<<< HEAD
+=======
+!private/
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
 !public/
 !.gitignore

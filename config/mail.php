@@ -30,7 +30,12 @@ return [
     | your mailers below. You may also add additional mailers if needed.
     |
     | Supported: "smtp", "sendmail", "mailgun", "ses", "ses-v2",
+<<<<<<< HEAD
     |            "postmark", "log", "array", "failover", "roundrobin"
+=======
+    |            "postmark", "resend", "log", "array",
+    |            "failover", "roundrobin"
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
     |
     */
 
@@ -38,6 +43,7 @@ return [
 
         'smtp' => [
             'transport' => 'smtp',
+<<<<<<< HEAD
             'url' => env('MAIL_URL'),
             'host' => env('MAIL_HOST', '127.0.0.1'),
             'port' => env('MAIL_PORT', 2525),
@@ -46,6 +52,16 @@ return [
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
+=======
+            'scheme' => env('MAIL_SCHEME'),
+            'url' => env('MAIL_URL'),
+            'host' => env('MAIL_HOST', '127.0.0.1'),
+            'port' => env('MAIL_PORT', 2525),
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+            'timeout' => null,
+            'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
         ],
 
         'ses' => [
@@ -60,6 +76,13 @@ return [
             // ],
         ],
 
+<<<<<<< HEAD
+=======
+        'resend' => [
+            'transport' => 'resend',
+        ],
+
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
         'sendmail' => [
             'transport' => 'sendmail',
             'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -bs -i'),
@@ -80,6 +103,10 @@ return [
                 'smtp',
                 'log',
             ],
+<<<<<<< HEAD
+=======
+            'retry_after' => 60,
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
         ],
 
         'roundrobin' => [
@@ -88,6 +115,10 @@ return [
                 'ses',
                 'postmark',
             ],
+<<<<<<< HEAD
+=======
+            'retry_after' => 60,
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
         ],
 
     ],

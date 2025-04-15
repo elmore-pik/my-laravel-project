@@ -65,7 +65,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'timezone' => env('APP_TIMEZONE', 'Asia/Tokyo'),
+=======
+    'timezone' => 'UTC',
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +82,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'locale' => env('APP_LOCALE', 'ja'),
+=======
+    'locale' => env('APP_LOCALE', 'en'),
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
 
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
 

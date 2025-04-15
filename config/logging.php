@@ -45,7 +45,11 @@ return [
     | utilizes the Monolog PHP logging library, which includes a variety
     | of powerful log handlers and formatters that you're free to use.
     |
+<<<<<<< HEAD
     | Available Drivers: "single", "daily", "slack", "syslog",
+=======
+    | Available drivers: "single", "daily", "slack", "syslog",
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
     |                    "errorlog", "monolog", "custom", "stack"
     |
     */
@@ -98,10 +102,17 @@ return [
             'driver' => 'monolog',
             'level' => env('LOG_LEVEL', 'debug'),
             'handler' => StreamHandler::class,
+<<<<<<< HEAD
             'formatter' => env('LOG_STDERR_FORMATTER'),
             'with' => [
                 'stream' => 'php://stderr',
             ],
+=======
+            'handler_with' => [
+                'stream' => 'php://stderr',
+            ],
+            'formatter' => env('LOG_STDERR_FORMATTER'),
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
             'processors' => [PsrLogMessageProcessor::class],
         ],
 

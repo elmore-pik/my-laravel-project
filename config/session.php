@@ -32,7 +32,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'lifetime' => env('SESSION_LIFETIME', 120),
+=======
+    'lifetime' => (int) env('SESSION_LIFETIME', 120),
+>>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
 
     'expire_on_close' => env('SESSION_EXPIRE_ON_CLOSE', false),
 
