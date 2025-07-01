@@ -36,3 +36,4 @@ yarn-error.log
 /.vscode
 /.zed
 >>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
+.env

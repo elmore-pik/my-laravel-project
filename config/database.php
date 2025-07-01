@@ -30,19 +30,16 @@ return [
     */
 
     'connections' => [
-
+        // sqlite の設定
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DB_URL'),
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
-<<<<<<< HEAD
-=======
             'busy_timeout' => null,
             'journal_mode' => null,
             'synchronous' => null,
->>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
         ],
 
         'mysql' => [
@@ -148,13 +145,11 @@ return [
 
         'client' => env('REDIS_CLIENT', 'phpredis'),
 
+        // redis.options の設定
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
             'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
-<<<<<<< HEAD
-=======
             'persistent' => env('REDIS_PERSISTENT', false),
->>>>>>> cbc2d63 (Laravelプロジェクトの初回コミット)
         ],
 
         'default' => [
